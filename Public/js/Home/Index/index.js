@@ -1,0 +1,25 @@
+$(function(){
+	$("#searchIcon").click(function(){
+		$(".search").animate({
+			marginLeft:"10"
+		},function(){
+			$("#searchIcon").fadeOut(function(){
+				$(".go").fadeIn();	
+			});
+		}).focus();
+		$("#searchIcon").animate({
+			marginLeft:"10"
+		});
+	});
+	$(".search").dblclick(function(){
+		$(".search").animate({
+			marginLeft:"-210"
+		},function(){
+			$(".go").hide();	
+			$("#searchIcon").fadeIn();
+		}).focus();
+		$("#searchIcon").animate({
+			marginLeft:"20"
+		});		
+	});
+});
