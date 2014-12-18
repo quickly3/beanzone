@@ -1,40 +1,38 @@
 body {
-	background-color: #333;
+
 }
 body, h1 {
 	font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
 	padding: 0;
-	margin: 0;
+	margin: 0
 }
 a {
 	outline: none;
-	color: #333;
+	color: #333
 }
 a:hover {
-	text-decoration: none;
+	text-decoration: none
 }
 ul {
 	list-style: none;
 	padding: 0;
-	margin: 0;
+	margin: 0
 }
 li {
 	display: list-item;
-	text-align: -webkit-match-parent;
+	text-align: -webkit-match-parent
 }
-
-/* header */
 header {
-	background-color: #000;
+	background-color: #000
 }
 header h1 {
 	padding-top: 10px;
 	padding-left: 60px;
-	height: 90px;
+	height: 90px
 }
 header h1 {
 	color: #EEE;
-	font-size: 60px;
+	font-size: 60px
 }
 header h1 span:nth-child(1) {
 	color: #FF6633
@@ -61,10 +59,8 @@ header h1 span:nth-child(8) {
 	color: #99FFFF
 }
 header div {
-	display: inline-block;
+	display: inline-block
 }
-
-/* aside */
 .superside {
 	display: inline-block;
 	width: 50px;
@@ -78,222 +74,158 @@ header div {
 	-ms-transition: all 0.25s linear 0s;
 	-o-transition: all 0.25s linear 0s;
 	transition: all 0.25s linear 0s;
-	position: absolute;
+	position: absolute
 }
 .side-ul .glyphicon {
 	font-size: 20px;
-	color: #BBB;
+	color: #BBB
 }
 .side-ul .fa {
 	font-size: 20px;
 	padding-left: 2px;
-	color: #BBB;
+	color: #BBB
 }
 .side-top {
 	display: block;
 	margin: 20px 0 50px 15px;
-	cursor: pointer;
+	cursor: pointer
 }
 .side-top i {
 	color: #BBB;
-	font-size: 20px;
+	font-size: 20px
 }
 .side-top i:hover {
-	color: #EEE;
+	color: #EEE
 }
 .side-ul a {
 	color: #FFFFFF;
 	cursor: pointer;
 	display: inline-block;
 	line-height: 22px;
-	/* font-style: normal;
-	*/
 	font-weight: 100;
 	padding: 8px 0 8px 12px;
-	/* text-transform: uppercase;
-	*/
-	width: 70%;
+	width: 70%
 }
 .side-ul li:hover {
-	background-color: #222222;
+	background-color: #222222
 }
 .side-ul li.active {
-	background-color: #b71427;
+	background-color: #b71427
 }
 .side-ul li.active a i {
-	color: #FFF;
+	color: #FFF
 }
 .side-ul a:hover {
 	color: #BBB;
-	text-decoration: none;
+	text-decoration: none
 }
-
-/* navi */
 nav {
-	margin-left: 50px;
 	height: 50px;
 	box-shadow: 0 0.125rem 0.25rem #ddd;
-	background: whiteSmoke;
+	background: whiteSmoke
 }
 nav ul li {
-	float: left;
+	float: left
 }
 .nav-left {
 	float: left;
 	height: 50px;
+	margin-left:5%;
 }
-#searchIcon{
-	float: left;
-	color: #000;
-	font-size: 20px;
-	line-height: 50px;
-	margin-left: 20px;
-	cursor: pointer;
+.nav-right{
+	float: right;
+	margin-right: 5%;
 }
 
-
-.go {
-	background-color: #D14836;
-	font-size: 20px;
-	color: #FFF;
-	line-height: 50px;
-	margin-left: 5px;
-	padding: 2px 5px 2px 5px;
-	border-radius: .25em;
-	cursor: pointer;
-	display: none;
-}
-
-.go:hover{
-	box-shadow: 1px 1px 2px #aaaaaa;
-	background-color:#b71427;
-}
 .search {
 	float: left;
 	display: inline-block;
 	width: 200px;
 	margin: 8px 0 0 -210px;
-	text-align: right;
+	text-align: right
+}
+#searchIcon {
+	opacity: 0.9;
+	float: left;
+	color: #000;
+	font-size: 20px;
+	background-color: #0099CC;
+	color: #FFF;
+	line-height: 28px;
+	margin-top: 8px;
+	padding: 2px 8px 2px 8px;
+	cursor: pointer;
 }
 
-.nav-right {
+#searchIcon:hover {
+	/*box-shadow: 1px 1px 2px #aaaaaa;*/
+	opacity: 0.8;
+}
+#searchIcon:active{
+	opacity: 1;
+	box-shadow: 1px 1px 2px #aaaaaa;
+}
+.bean {
 	float: right;
 	height: 50px;
 	margin-right: 70px;
-	cursor: pointer;
-}
-.nav-right img {
-	height: 40px;
-	width: 40px;
-	margin: 4px 10px 4px 10px;
-}
-.nav-right ul li span {
-	display: block;
-	color: #000;
-	line-height: 18px;
-	cursor: pointer;
-	margin-right: 10px;
-}
-.nav-right ul li span:hover {
-	/*color: #d14836;*/
+	cursor: pointer
 }
 .bean {
 	height: 48px;
-	margin-top: 1px;
-
+	margin-top: 1px
 }
 .bean:hover {
 	background-color: #99CCFF;
 	border-radius: 0.5em
 }
-#user {
-	margin-top: 8px;
+.bean img {
+	height: 40px;
+	width: 40px;
+	margin: 4px 10px 4px 10px
+}
+ ul.bean li span {
+	display: block;
+	color: #000;
+	line-height: 18px;
+	cursor: pointer;
+	margin-right: 10px
+}
+ul.bean li span:hover {
 }
 
-/* container */
+/*bean按钮集	*/
+.b-btn {
+  display: inline-block;
+  padding: 2px 4px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+}
+
+.b-btn-green{background-color: #40AA53;color:#fff;}
+.b-btn-green:active{background-color: #39A05C;}
+
+
+
+#user {
+	margin-top: 8px
+}
 .container {
-	padding: 20px 20px 0 20px;
-	background-color: #FFF;
-	margin-left: 50px;
 	width: 100%;
-	min-height: 1200px;
-}
-#myBlog {
-	width: 700px;
-	display: inline-block;
-}
-.blog {
-	width: 700px;
-	display: inline-block;
-	margin-bottom: 20px;
-}
-.pre-cat {
-	float: left;
-	color: #222;
-	position: relative;
-	margin-right: 14px;
-	font-size: 14px;
-	line-height: 20px;
-	background-color: #333;
-}
-.pre-cat:hover {
-	background-color: #d14836
-}
-.pre-cat:hover .pre-catarrow {
-	border-left-color: #D14836;
-}
-.pre-catarrow {
-	position: absolute;
-	height: 0;
-	width: 0;
-	font-size: 0;
-	line-height: 0;
-	border: 4px solid transparent;
-	_border: 4px solid #fff;
-	border-left-color: #333;
-	right: -8px;
-	top: 7px;
-}
-.pre-catinner a {
-	color: white;
-	display: block;
-	padding: 1px 6px;
-}
-.b-l1 {
-	height: 30px;
-}
-.b-label {
-	float: left;
-}
-.b-title {
-	float: left;
-	font-size: 18px;
-	line-height: 24px;
-	min-height: 24px;
-	display: block;
-	padding-right: 35px;
-	font-family: "Microsoft Yahei", arial, helvetica, sans-serif;
-	font-weight: bold;
-}
-.b-title a:hover {
-	color: #d14836;
-}
-.b-read {
-	float: right;
-}
-.b-read span {
-	background-color: #D14836;
-}
-.b-read span:hover {
-	background-color: #993300;
-}
-.b-comment {
-	float: right;
-	margin-right: 5px;
-}
-.b-comment span {
-	background-color: #0099CC;
-}
-.b-comment span:hover {
-	background-color: #0066CC;
+	margin-top:50px;
+	min-height: 1200px
 }

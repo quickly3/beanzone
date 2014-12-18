@@ -1,0 +1,188 @@
+/* index页面效果start */
+
+.blog {
+	display: inline-block;
+
+	margin-bottom: 20px;
+	border-bottom: 1px solid #e5e5e5;
+}
+.pre-cat {
+	float: left;
+	color: #222;
+	position: relative;
+	margin-right: 14px;
+	font-size: 14px;
+	line-height: 20px;
+	background-color: #333
+}
+.pre-cat:hover {
+	background-color: #d14836
+}
+.pre-cat:hover .pre-catarrow {
+	border-left-color: #D14836
+}
+.pre-catarrow {
+	position: absolute;
+	height: 0;
+	width: 0;
+	font-size: 0;
+	line-height: 0;
+	border: 4px solid transparent;
+	_border: 4px solid #fff;
+	border-left-color: #333;
+	right: -8px;
+	top: 7px
+}
+.pre-catinner a {
+	color: white;
+	display: block;
+	padding: 1px 6px
+}
+.b-img img {
+	width: 220px;
+	height: 150px;
+}
+.b-l1 {
+	height: 30px
+}
+.b-label {
+	float: left
+}
+.b-title {
+	float: left;
+	font-size: 18px;
+	line-height: 24px;
+	min-height: 24px;
+	display: block;
+	padding-right: 35px;
+	font-family: "Microsoft Yahei", arial, helvetica, sans-serif;
+	font-weight: bold
+}
+.b-title a:hover {
+	color: #d14836
+}
+.b-read {
+	float: right
+}
+.b-read span {
+	background-color: #D14836
+}
+.b-read span:hover {
+	background-color: #993300
+}
+.b-comment {
+	float: right;
+	margin-right: 5px
+}
+.b-comment span {
+	background-color: #0099CC
+}
+.b-comment span:hover {
+	background-color: #0066CC
+}
+
+/* 第三例 */
+.column3:nth-child(0) {
+	margin-right: 80px;
+}
+.message{height: 50px;width:300px;}
+
+.message textarea {
+	float: left;
+	border: 1px solid #40AA53;
+	width: 233px;
+	resize:none;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	-webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+	-o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.message textarea:focus {
+	border-color: #66afe9;
+	outline: 0;
+}
+.message span {
+	float: left;
+	padding: 12px 8px;
+}
+.message span:hover{
+	color: yellow;
+}
+
+.dia{
+	padding:10px 0;
+	border-bottom: 1px dashed #ddd;
+	width: 280px;
+
+}
+.dia span{font-size: 9px;}
+.portrait{
+	display: inline-block;
+	vertical-align: top;	
+}
+.portrait > a > img{
+	width: 36px;
+	height: 36px;
+	padding: 1px;
+}
+.dia .body{
+	display: inline-block;
+	width: 200px;
+}
+
+.dia .body .user a{
+	color: #6cabe1;
+	text-decoration: underline;
+	cursor: auto;
+}
+.dia .body .time{display: block;
+color: #9A9A9A;
+margin: 5px 0 0 0;}
+
+
+/*侧边栏三号其他功能*/
+.col3-title{
+	display: inline-block;
+	font-size: 17px;
+	color: #ff4629;
+	margin: 10px 0;
+}
+
+.newly ul>li>a,.pigeonhole ul>li>a,.other ul>li>a{
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	-o-transition: all .3s;
+	transition: all .3s;
+	width: 250px;
+	display: block;
+	margin-bottom: 10px;
+	color:#38485a;
+	cursor: 
+}
+
+.newly ul>li>a:hover,.pigeonhole ul>li>a:hover,.other ul>li>a:hover{
+	color:#428bca 
+}
+
+.category ul{
+	width: 250px;
+}
+
+.category ul>li>a{
+	display: inline-block;
+	padding: 2px 4px;
+	color: #fff;
+	margin:2px;
+	opacity: 0.9;
+	-webkit-transition: all .2s;
+	-moz-transition: all .2s;
+	-o-transition: all .2s;
+	transition: all .2s;	
+}
+.category ul>li>a:hover{
+	opacity: 0.8;
+}
+.category ul>li>a:active{
+	opacity: 1;
+}
