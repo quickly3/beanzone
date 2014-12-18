@@ -9,7 +9,7 @@
 	}
 
 	function defaultCss(){
-		return __ROOT__.'/Public/Css/'.MODULE_NAME.'/'.CONTROLLER_NAME.'/'.ACTION_NAME.'.css';
+		return __ROOT__.'/Public/css/'.MODULE_NAME.'/'.CONTROLLER_NAME.'/'.ACTION_NAME.'.css';
 	}
 
 ?>
