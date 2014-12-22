@@ -8,7 +8,7 @@ class IndexController extends Controller{
 	}
 
 	public function create(){
-
+		
 		$this->display(defaultTpl());
 	}
 }

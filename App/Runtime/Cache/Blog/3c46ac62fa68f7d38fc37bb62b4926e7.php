@@ -9,7 +9,7 @@
 	
 	<link type="text/css" rel="stylesheet" href="<?php echo defaultCss();?>">
 
-	<script type="text/javascript" src="/beanzone/Public/vendor/jQuery-1.11.1.js"></script>
+	<script type="text/javascript" src="/beanzone/Public/vendor/jquery-1.11.1.js"></script>
 	<script type="text/javascript" src="/beanzone/Public/vendor/bootstrap/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="/beanzone/Public/js/common/common.js"></script>
 	
@@ -29,58 +29,9 @@
 		</div>
 	</header>
 <body>
-	<aside class="superside">
-		<a class="side-top"> <i class="glyphicon glyphicon-align-justify"></i>
-		</a>
-		<ul class="side-ul">
-			<li class="active">
-				<a href=""> <i class="glyphicon glyphicon-home"></i>
-				</a>
-			</li>
-			<li>
-				<a href="">
-					<i class="fa fa-clipboard"></i>
-				</a>
-			</li>
-			<li>
-				<a href="">
-					<i>C</i>
-				</a>
-			</li>
-			<li>
-				<a href="">
-					<i>D</i>
-				</a>
-			</li>
-			<li>
-				<a href="">
-					<i>E</i>
-				</a>
-			</li>
-			<li>
-				<a href="">
-					<i>F</i>
-				</a>
-			</li>
-			<li>
-				<a href="">
-					<i>G</i>
-				</a>
-			</li>
-			<li>
-				<a href="">
-					<i>H</i>
-				</a>
-			</li>
-		</ul>
-	</aside>
+
 	<nav>
 		<div class="nav-left">
-			<input type="text" class="form-control search" placeholder="...">
-			<i class="glyphicon glyphicon-search" id="searchIcon"></i>
-			<i class="go">Go</i>
-		</div>
-		<div class="nav-right">
 			<ul class="bean">
 				<li>
 					<img src="/beanzone/Public/images/common/bean.png" alt="">
@@ -91,12 +42,22 @@
 				</li>
 			</ul>
 		</div>
+		<div class="nav-right">
+			<input type="text" class="form-control search" placeholder="...">
+			<i class="glyphicon glyphicon-search" id="searchIcon"></i>
+		</div>
+
 	</nav>
 	<div class="container">
 	
-	<div id="editor">
-		
+	<div class="main row" >
+		<div class="col-lg-2"></div>
+		<div id="editor" class="col-lg-8">
+			
+		</div>		
+		<div class="col-lg-2"></div>
 	</div>
+
 
 	</div>
 

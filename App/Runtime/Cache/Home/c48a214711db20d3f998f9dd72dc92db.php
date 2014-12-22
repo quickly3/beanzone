@@ -9,7 +9,7 @@
 	
     <link rel="stylesheet" href="<?php echo defaultCss();?>">
 
-	<script type="text/javascript" src="/beanzone/Public/vendor/jQuery-1.11.1.js"></script>
+	<script type="text/javascript" src="/beanzone/Public/vendor/jquery-1.11.1.js"></script>
 	<script type="text/javascript" src="/beanzone/Public/vendor/bootstrap/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="/beanzone/Public/js/common/common.js"></script>
 	
