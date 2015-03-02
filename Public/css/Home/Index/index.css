@@ -14,13 +14,19 @@
 	margin-right: 14px;
 	font-size: 14px;
 	line-height: 20px;
-	background-color: #333
+	background-color: #333;
+	-webkit-transition: background 0.3s;
+	-o-transition: background 0.3s;
+	transition: background 0.3s;
 }
 .pre-cat:hover {
 	background-color: #d14836
 }
 .pre-cat:hover .pre-catarrow {
-	border-left-color: #D14836
+	border-left-color: #D14836;
+	-webkit-transition: background 0.3s;
+	-o-transition: background 0.3s;
+	transition: background 0.3s;
 }
 .pre-catarrow {
 	position: absolute;
@@ -37,7 +43,8 @@
 .pre-catinner a {
 	color: white;
 	display: block;
-	padding: 1px 6px
+	padding: 1px 6px;
+	
 }
 .blog{
 	width: 730px;
@@ -48,6 +55,7 @@
 	float:left;
 }
 .b-img img {
+<<<<<<< HEAD
 	width: 170px;
 	height: 120px;
 	cursor: pointer;
@@ -55,6 +63,11 @@
 .b-post{
 	width: 75%;
 	float:right;
+=======
+	width: 220px;
+	height: 150px;
+	cursor: pointer;
+>>>>>>> origin/master
 }
 .b-l1 {
 	height: 30px
@@ -84,7 +97,10 @@
 	display: block;
 	padding-right: 35px;
 	font-family: "Microsoft Yahei", arial, helvetica, sans-serif;
-	font-weight: bold
+	font-weight: bold;
+	-webkit-transition: background 0.3s;
+	-o-transition: background 0.3s;
+	transition: background 0.3s;
 }
 .b-title a{
 	color: #333;
@@ -105,7 +121,11 @@
 	vertical-align: baseline;
 }
 .b-read span {
-	background-color: #D14836
+	background-color: #D14836;
+	cursor: default;
+	-webkit-transition: background 0.3s;
+	-o-transition: background 0.3s;
+	transition: background 0.3s;
 }
 .b-read span:hover {
 	background-color: #993300
@@ -115,11 +135,22 @@
 	margin-right: 5px
 }
 .b-comment span {
-	background-color: #0099CC
+	background-color: #0099CC;
+	cursor:default;
+	-webkit-transition: background 0.3s;
+	-o-transition: background 0.3s;
+	transition: background 0.3s;
 }
 .b-comment span:hover {
-	background-color: #0066CC
+	background-color: #0066CC;
 }
+.b-content{	
+	cursor: pointer;
+	-webkit-transition: color 0.1s;
+	-o-transition: color 0.1s;
+	transition: colort 0.1s;
+}
+.b-content:hover{color: #0099CC;}
 
 .b-content{
 	clear:both;
