@@ -32,13 +32,59 @@ $(function(){
 		});		
 	});
 
-	$('.category ul li a').each(function(){
-		var colorSet = ['#e8443a','#aa5096','#1CA1E2','#FFD302','#FFD302','#9B4C13','#8DC027','#FF0198','#4837cd','#33ac5b','#20c8a6'],
-			cLen,ranNum;
 
-		cLen = colorSet.length;
-		ranNum = Math.ceil(Math.random()*cLen) - 1;
-		
-		$(this).css({backgroundColor:colorSet[ranNum]});
+
+	var PostsModel = Backbone.Model.extend({});
+
+	var PostsCollections = Backbone.Collection.extend({
+		model:PostsModel
 	});
+
+	var postCollection = new PostsCollections(posts);
+
+	var AppView = Backbone.View.extend({
+		el:'.leftPan',
+		initialize:function(){
+			this.addAll();
+		},
+		addAll:function(){	
+			
+			postCollection.each(this.addOne,this);
+		},
+		addOne:function(post){
+	    	var view = new PostView({model: post});
+	    	this.$el.append(view.render().el);
+		}
+	});
+
+	var PostView = Backbone.View.extend({
+		tagName:'div',
+		template:_.template($('#postsTemp').html()),
+		events:{
+			"click .b-img>img":"toPost",
+			"click .b-title>a":"toPost"
+		},
+		render:function(){
+			var date,dateArr,id = this.model.get("id");
+			
+			this.model.set("toPost","/Home/Index/post/id/"+id);
+			
+			date = this.model.get("post_date");
+			dateArr = date.split(" ").shift().split("-");
+			date = dateArr[0].substring(2,4)+"年"+dateArr[1]+"月"+dateArr[2]+"日";
+			this.model.set("post_date",date);
+	    	
+	    	this.$el.html(this.template(this.model.toJSON()));
+	    	return this;
+		},
+		toPost:function(){
+			
+		}
+
+	});
+
+	var App = new AppView;
+
+
+
 });

@@ -66,6 +66,7 @@ ul{
 .pre_img img{
 	width: 100%;
 	height: 190px;
+	cursor: pointer;
 }
 .pre-submit{
 	height: 37px;

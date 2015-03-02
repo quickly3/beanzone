@@ -6,7 +6,7 @@ return array(
 	'DB_USER'               =>  'root',      // 用户名
 	'DB_PWD'                =>  '',          // 密码
 	'DB_PREFIX'             =>  '',    // 数据库表前缀
-	'SHOW_PAGE_TRACE'       =>  0,
+	'SHOW_PAGE_TRACE'       =>  1,
 	'VIEW_PATH'             =>  './Public/tpl/',
 	'TMPL_PARSE_STRING'     =>  array(
 		'__COMMONJS__' =>__ROOT__.'/Public/js/common',
@@ -14,5 +14,12 @@ return array(
 		'__IMAGES__'   =>__ROOT__.'/Public/images',
 		'__VENDOR__'   =>__ROOT__.'/Public/vendor'
 		),
+	'URL_ROUTER_ON'   => true, 
+	'URL_ROUTE_RULES'=>array(
+	    'post/:id'=>'/Home/Index/post/id/:1'
+	    ),
+	'USER_SALT'=>'BEAN',
+	'SERVER_PATH'=>$_SERVER['DOCUMENT_ROOT'],
+	'IMAGE_HUB'=>__ROOT__.'/Public/images/users',
 	//'配置项'=>'配置值'
 );
