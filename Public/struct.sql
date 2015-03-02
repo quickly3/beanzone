@@ -6,6 +6,7 @@ CREATE TABLE b_posts(
  post_title TEXT ,
  post_excerpt TEXT ,
  post_status VARCHAR(20) NOT NULL DEFAULT '',
+ post_preimg VARCHAR(60) NOT NULL DEFAULT '',
  comment_status VARCHAR(20) NOT NULL DEFAULT '',
  post_modified VARCHAR(20) NOT NULL DEFAULT '',
  comment_count INT(20) NOT NULL DEFAULT 0

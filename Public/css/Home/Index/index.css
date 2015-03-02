@@ -55,19 +55,16 @@
 	float:left;
 }
 .b-img img {
-<<<<<<< HEAD
 	width: 170px;
 	height: 120px;
 	cursor: pointer;
 }
 .b-post{
-	width: 75%;
-	float:right;
-=======
+
 	width: 220px;
 	height: 150px;
 	cursor: pointer;
->>>>>>> origin/master
+
 }
 .b-l1 {
 	height: 30px
