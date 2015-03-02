@@ -60,8 +60,8 @@
 	cursor: pointer;
 }
 .b-post{
-
-	width: 220px;
+	width: 75%;
+	float:right;
 	height: 150px;
 	cursor: pointer;
 
