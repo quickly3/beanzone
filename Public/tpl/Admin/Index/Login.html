@@ -2,6 +2,26 @@
 <html>
 <head>
 	<title></title>
+	<script src="__VENDOR__/jquery-1.11.1.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		$('input[type=submit]').click(function(e){
+			e.preventDefault();
+			var url = $('form').attr('action');
+				data = {
+					user_name:$('input[name=user_name]').val(),
+					user_pass:$('input[name=user_pass]').val()
+				}
+			$.post(url,data,function(res){
+				if(res&&res.sta == 1){
+					history.go(-1);
+				}else{
+					alert('login failed')
+				}
+			},'json');
+		});
+	});
+	</script>
 </head>
 <body>
 	<form action="/Admin/Index/LoginHandle" method="post">
