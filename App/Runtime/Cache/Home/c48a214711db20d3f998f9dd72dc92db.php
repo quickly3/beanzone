@@ -9,53 +9,6 @@
 	
     <link rel="stylesheet" href="<?php echo defaultCss();?>">
 
-	<script type="text/javascript" src="/Public/vendor/jquery-1.11.1.js"></script>
-<!--	<script type="text/javascript" src="/Public/vendor/bootstrap/js/bootstrap.min.js"></script> -->
-	<script type="text/javascript" src="/Public/js/common/common.js"></script>
-	
-	<script type="text/javascript" src="/Public/vendor/underscore.js"></script>
-	<script type="text/javascript" src="/Public/vendor/backbone.js"></script>
-	<script type="text/javascript">
-		var posts = <?php echo ($posts); ?>;
-	</script>
-    <script type="text/javascript" src="<?php echo defaultJs();?>"></script>
-    <script type="text/html" class='template' id='postsTemp'>
-        <div class="blog row">
-            <div class="b-img">
-                <a href="<%=toPost%>">
-                    <img src="<%= post_preimg%>" alt="" class='img-thumbnail'>
-                </a>
-                <div class="b-info">
-                    <div class="b-date"><i class="fa fa-clock-o"></i><span><%= post_date%></span></div>
-                    <div class="b-author"><i class="fa fa-user"></i><span><%= user_name%></span></div>
-                </div>
-            </div>
-            <div class="b-post">
-                <div class="b-l1">
-                    <div class="b-label pre-cat">
-                        <div class="pre-catinner">
-                            <a href="">标签</a>
-                        </div>
-                        <div class="pre-catarrow"></div>
-                    </div>
-                    <div class="b-title">
-                        <a href="<%=toPost%>"><%= post_title%></a>
-                    </div>
-                    <div class="b-read ">
-                        <span class="badge">2000 阅</span>
-                    </div>
-                    <div class="b-comment">
-                        <span class="badge">20 评</span>
-                    </div>
-                </div>
-
-                <div class="b-content">
-                	<%= post_excerpt%>
-                </div>
-            </div>
-        </div>
-    </script>
-
 </head>
 	<header>
 		<nav>
@@ -200,6 +153,55 @@
 		</div>
 	</div>
 
-	<footer></footer>
+	<footer>
+	<script type="text/javascript" src="/Public/vendor/jquery-1.11.1.js"></script>
+<!--	<script type="text/javascript" src="/Public/vendor/bootstrap/js/bootstrap.min.js"></script> -->
+	<script type="text/javascript" src="/Public/js/common/common.js"></script>
+	
+	<script type="text/javascript" src="/Public/vendor/underscore.js"></script>
+	<script type="text/javascript" src="/Public/vendor/backbone.js"></script>
+	<script type="text/javascript">
+		var posts = <?php echo ($posts); ?>;
+	</script>
+    <script type="text/javascript" src="<?php echo defaultJs();?>"></script>
+    <script type="text/html" class='template' id='postsTemp'>
+        <div class="blog row">
+            <div class="b-img">
+                <a href="<%=toPost%>">
+                    <img src="<%= post_preimg%>" alt="" class='img-thumbnail'>
+                </a>
+                <div class="b-info">
+                    <div class="b-date"><i class="fa fa-clock-o"></i><span><%= post_date%></span></div>
+                    <div class="b-author"><i class="fa fa-user"></i><span><%= user_name%></span></div>
+                </div>
+            </div>
+            <div class="b-post">
+                <div class="b-l1">
+                    <div class="b-label pre-cat">
+                        <div class="pre-catinner">
+                            <a href="">标签</a>
+                        </div>
+                        <div class="pre-catarrow"></div>
+                    </div>
+                    <div class="b-title">
+                        <a href="<%=toPost%>"><%= post_title%></a>
+                    </div>
+                    <div class="b-read ">
+                        <span class="badge">2000 阅</span>
+                    </div>
+                    <div class="b-comment">
+                        <span class="badge">20 评</span>
+                    </div>
+                </div>
+
+                <div class="b-content">
+                	<%= post_excerpt%>
+                </div>
+            </div>
+        </div>
+    </script>
+		
+		
+	</footer>
 </body>
 </html>
