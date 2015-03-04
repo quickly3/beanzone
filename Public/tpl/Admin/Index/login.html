@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="__VENDOR__/jquery-1.11.1.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		$('input[type=submit]').click(function(e){
+			e.preventDefault();
+			var url = $('form').attr('action');
+				data = {
+					user_name:$('input[name=user_name]').val(),
+					user_pass:$('input[name=user_pass]').val()
+				}
+			$.post(url,data,function(res){
+				if(res&&res.sta == 1){
+					history.go(-1);
+				}else{
+					alert('login failed')
+				}
+			},'json');
+		});
+	});
+	</script>
+</head>
+<body>
+	<form action="/Admin/Index/LoginHandle" method="post">
+		<div>
+			<label for="name">Name</label>
+			<input type="text" name="user_name" id="name" value="" tabindex="1" />
+		</div>
+		<div>
+			<label for="name">Pass</label>
+			<input type="text" name="user_pass" id="pass" value="" tabindex="1" />
+		</div>
+	
+		<div>
+			<input type="submit" value="Submit" />
+		</div>
+	</form>
+</body>
+</html>
