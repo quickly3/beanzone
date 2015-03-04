@@ -18,6 +18,7 @@ $(function(){
 			data = this.model.toJSON()[0];
 
 			if(data){
+				data.source_link = data.source_link || '无'; 
 				this.$el.html(this.template(data));	
 			}
 		}

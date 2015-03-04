@@ -76,6 +76,10 @@
 	display: inline-block;
 	color: grey;
 }
+.b-date span,.b-author span{
+	color: #000;
+}
+
 .b-date>span{
 	font-size: 12px;
 	line-height: 14px;
@@ -145,7 +149,7 @@
 	cursor: pointer;
 	-webkit-transition: color 0.1s;
 	-o-transition: color 0.1s;
-	transition: colort 0.1s;
+	transition: color 0.1s;
 }
 .b-content:hover{color: #0099CC;}
 
@@ -232,6 +236,6 @@ margin: 5px 0 0 0;}
 	display: inline-block;
 	font-size: 17px;
 	color: #ff4629;
-	margin: 10px 0;
+	margin-bottom: 10px;
 }
 

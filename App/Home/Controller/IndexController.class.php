@@ -20,8 +20,16 @@ class IndexController extends Controller {
 
     public function post(){
     	$post_id = I('id');
-     	$post = M('Posts','b_');
-    	$posts = json_encode($post->where("id=$post_id")->select());
+        $M = M();
+        $sql ="SELECT  a.*,b.user_login AS author_name 
+                 FROM b_posts AS a 
+            LEFT JOIN b_users b ON a.`post_author` = b.`id`
+                WHERE a.id=$post_id ";
+
+     	if($posts = M()->query($sql)){
+            $posts = json_encode($posts);
+        }
+
     	$this->assign("posts",$posts);
     	$this->display(defaultTpl());   	
     }
