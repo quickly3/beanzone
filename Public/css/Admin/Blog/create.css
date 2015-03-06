@@ -1,4 +1,7 @@
-a{color: #0099FF}
+a{
+	color:#fff;
+}
+
 ul{
 	margin-bottom: 0px;
 }
@@ -8,14 +11,24 @@ ul{
 	padding: 0px;
 }
 
-.main {margin: 10px 0;}
+.main {
+	margin-left: 225px;
+	min-height: 960px;
+	background: #fff;
+}
+
 .editor{
+	margin-top: 20px;
 	height: 480px;
 }
-#ue_title{margin-bottom:10px;}
+
+#ue_title{
+	margin-bottom:10px;
+}
 
 
 .control{
+	margin-top: 20px;
 	border: #ddd 1px solid;
 	border-radius: 5px;
 }

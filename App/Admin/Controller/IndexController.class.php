@@ -3,6 +3,10 @@ namespace Admin\Controller;
 use Think\Controller\RestController;
 
 class IndexController extends RestController{
+	public function index(){
+		$this->display(defaultTpl());
+	}
+
 	public function login(){
 		$this->display(defaultTpl());
 	}
