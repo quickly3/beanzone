@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>D_bean Factory - My TED for you</title>
 <!-- 	<link type="text/css" rel="stylesheet" href="/Public/vendor/bootstrap/css/bootstrap.min.css"> -->
-	<link type="text/css" rel="stylesheet" href="/Public/vendor/font-awesome/css/font-awesome.css">
+	<link type="text/css" rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.2.0/css/font-awesome.min.css">
 	<link type="text/css" rel="stylesheet" href="/Public/css/common/all.css">
 	
     <link rel="stylesheet" href="<?php echo defaultCss();?>">
@@ -154,7 +154,7 @@
 	</div>
 
 	<footer>
-	<script type="text/javascript" src="/Public/vendor/jquery-1.11.1.js"></script>
+	<script type="text/javascript" src="http://cdn.bootcss.com/jquery/1.11.2/jquery.js"></script>
 <!--	<script type="text/javascript" src="/Public/vendor/bootstrap/js/bootstrap.min.js"></script> -->
 	<script type="text/javascript" src="/Public/js/common/common.js"></script>
 	
