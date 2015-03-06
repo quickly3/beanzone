@@ -6,7 +6,7 @@ return array(
 	'DB_USER'               =>  'root',      // 用户名
 	'DB_PWD'                =>  '',          // 密码
 	'DB_PREFIX'             =>  '',    // 数据库表前缀
-	'SHOW_PAGE_TRACE'       =>  1,
+	'SHOW_PAGE_TRACE'       =>  0,
 	'VIEW_PATH'             =>  './Public/tpl/',
 	'TMPL_PARSE_STRING'     =>  array(
 		'__COMMONJS__' =>__ROOT__.'/Public/js/common',

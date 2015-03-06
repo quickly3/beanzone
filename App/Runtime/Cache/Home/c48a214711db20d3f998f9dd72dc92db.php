@@ -158,8 +158,8 @@
 <!--	<script type="text/javascript" src="/Public/vendor/bootstrap/js/bootstrap.min.js"></script> -->
 	<script type="text/javascript" src="/Public/js/common/common.js"></script>
 	
-	<script type="text/javascript" src="/Public/vendor/underscore.js"></script>
-	<script type="text/javascript" src="/Public/vendor/backbone.js"></script>
+	<script type="text/javascript" src="http://cdn.bootcss.com/underscore.js/1.7.0/underscore-min.js"></script>
+	<script type="text/javascript" src="http://cdn.bootcss.com/backbone.js/1.1.2/backbone-min.js"></script>
 	<script type="text/javascript">
 		var posts = <?php echo ($posts); ?>;
 	</script>
