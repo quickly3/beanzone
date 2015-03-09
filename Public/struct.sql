@@ -23,3 +23,11 @@ CREATE TABLE b_users(
  user_url varchar(100) NOT NULL DEFAULT '',
  user_status int(11) NOT NULL DEFAULT 0
 )DEFAULT CHARSET=utf8
+
+CREATE TABLE b_project(
+ id INT(11) UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT ,
+ pj_lastid INT(11) UNSIGNED not null DEFAULT 0,
+ pj_content LONGTEXT ,
+ pj_status varchar(20),
+ pj_date DATETIME NOT NULL DEFAULT 0
+)DEFAULT CHARSET=utf8

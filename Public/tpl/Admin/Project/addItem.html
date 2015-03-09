@@ -1,0 +1,48 @@
+<extend name='Public/tpl/base/admin.html'/>
+<block name="csszone">
+	
+	<link type="text/css" rel="stylesheet" href="{:defaultCss()}">
+</block>
+<block name="jszone">
+	<script type="text/javascript" src="http://cdn.bootcss.com/underscore.js/1.7.0/underscore-min.js"></script>
+	<script type="text/javascript" src="http://cdn.bootcss.com/backbone.js/1.1.2/backbone-min.js"></script>
+	<script type="text/javascript">
+	var projectItem = {$projectItem};
+	</script>
+	<script type="text/html" class='template' id='pjItem'>
+			<td><%= id%></td>
+			<td><%= pj_content%></td>
+			<td><%= pj_status%></td>
+			<td><%= pj_date%></td>
+			<td><%= pj_handle%></td>
+	</script>	
+	<script type="text/javascript" src="{:defaultJs()}"></script>
+</block>
+<block name='main'>
+	<div class="main">
+		<div class="item">
+			<input class="form-control" name='content'></input>
+			<select class="form-control status">
+				<option value="1" >未处理</option>
+				<option value="2" >已处理</option>
+			</select>
+			<span class="btn btn-primary submit">提交</span>
+		</div>
+		<div class="projectItem">
+			<table class='table'>
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>说明</th>
+						<th>条目状态</th>
+						<th>加入日期</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					
+				</tbody>
+			</table>
+		</div>
+	</div>
+</block>

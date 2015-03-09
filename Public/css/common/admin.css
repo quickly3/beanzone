@@ -48,6 +48,7 @@ body, h1 {
 }
 
 a {
+	color:#fff;
 	outline: none;
 	text-decoration: none;
 	
@@ -91,4 +92,10 @@ li {
 
 .sidebar>ul ul{
 	padding-left: 25px;
+}
+
+.main{
+	margin-left: 225px;
+	min-height: 960px;
+	background: #fff;
 }

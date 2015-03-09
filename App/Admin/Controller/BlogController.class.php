@@ -3,6 +3,14 @@ namespace Admin\Controller;
 use Think\Controller\RestController;
 
 class BlogController extends RestController{
+	public function __construct(){
+		parent::__construct();
+		if(ACTION_NAME !== 'login'||ACTION_NAME !== 'loginHandle'){
+			is_login();
+		}
+	}
+
+
 	public function index(){
 
 	}
@@ -33,9 +41,11 @@ class BlogController extends RestController{
 				$data = json_decode($request_body,true);
 				$data['post_author'] = $user_id;
 				date_default_timezone_set('PRC');
+				if($data['post_date'] === null){
+					$data['post_date'] = $date = date("Y-m-d H:i:s");
+				}
+				unset($data['timeSta']);
 				
-				
-				$data['post_date'] = $date = date("Y-m-d H:i:s");;
 				if(!$post->add($data)){
 					$res['status'] = 0;
 					// echo $post->_sql();

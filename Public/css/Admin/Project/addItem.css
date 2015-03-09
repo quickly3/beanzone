@@ -1,0 +1,39 @@
+.item{
+	height: 25px;
+	padding: 10px;
+}
+.item input{
+	float:left;
+	margin-right: 10px;
+	width: 200px;
+}
+
+.item select{
+	float:left;
+	margin-right: 10px;
+	width: 200px;
+}
+.item .submit{
+	float:left;
+	margin-right: 10px;
+}
+.projectItem{
+	width: 800px;
+}
+
+
+.fa-close{
+	color: red;
+	cursor: pointer;
+}
+.fa-check{
+	color: green;
+}
+.fa-bookmark{
+	color:#FF9900;
+}
+
+.fa-check-square{
+	color:#66CC33;
+	cursor: pointer;
+}

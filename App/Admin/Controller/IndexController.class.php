@@ -3,6 +3,13 @@ namespace Admin\Controller;
 use Think\Controller\RestController;
 
 class IndexController extends RestController{
+	public function __construct(){
+		parent::__construct();
+		if(ACTION_NAME !== 'login'&&ACTION_NAME !== 'loginHandle'){
+			is_login();
+		}
+	}
+
 	public function index(){
 		$this->display(defaultTpl());
 	}

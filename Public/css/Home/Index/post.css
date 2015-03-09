@@ -22,14 +22,16 @@
 }
 
 .entry-content{
-	line-height: 1.7em;
-	font-size: 16px;	
+	line-height: 1.2em;
+	font-size: 18px;	
 	padding-top:20px;
 }
 .entry-content p{
-	text-indent: 1em;
+	
 }
-
+.entry-content li{
+	margin-left: 20px;
+}
 .entry-content a{
 	color: #0099CC;
 	transition: color ease-in-out .3s;

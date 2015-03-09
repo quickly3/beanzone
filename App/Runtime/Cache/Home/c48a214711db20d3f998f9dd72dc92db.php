@@ -87,31 +87,11 @@
 						<span class="col3-title">最新文章</span>
 						<span>
 							<ul>
-								<li>
-									<a href="">关于开水煮白菜的思考研究的同一场理论和量子力学</a>
-									<a href="">关于开水煮白菜的思考研究的同一场理论和量子力学</a>
-									<a href="">关于开水煮白菜的思考研究的同一场理论和量子力学</a>
-									<a href="">关于开水煮白菜的思考研究的同一场理论和量子力学</a>
-									<a href="">关于开水煮白菜的思考研究的同一场理论和量子力学</a>
-								</li>
+
 							</ul>
 						</span>
 					</div>
-					<div class="pigeonhole">
-						<span class="col3-title">文章归档</span>
-						<span>
-							<ul>
-								<li>
-									<a href="">2014年七月</a>
-									<a href="">2014年八月</a>
-									<a href="">2014年九月</a>
-									<a href="">2014年十月</a>
-									<a href="">2014年十一月</a>
-									<a href="">2014年十二月</a>
-								</li>
-							</ul>
-						</span>
-					</div>
+
 					<div class="category">
 						<span class="col3-title">分类</span>
 						<span>
@@ -134,6 +114,21 @@
 							</ul>					
 						</span>
 					</div>
+					<div class="pigeonhole">
+						<span class="col3-title">文章归档</span>
+						<span>
+							<ul>
+								<li>
+									<a href="">2014年七月</a>
+									<a href="">2014年八月</a>
+									<a href="">2014年九月</a>
+									<a href="">2014年十月</a>
+									<a href="">2014年十一月</a>
+									<a href="">2014年十二月</a>
+								</li>
+							</ul>
+						</span>
+					</div>					
 					<div class="other">
 						<span class="col3-title">更多功能</span>
 						<span>
@@ -157,11 +152,19 @@
 	<script type="text/javascript" src="http://cdn.bootcss.com/jquery/1.11.2/jquery.js"></script>
 <!--	<script type="text/javascript" src="/Public/vendor/bootstrap/js/bootstrap.min.js"></script> -->
 	<script type="text/javascript" src="/Public/js/common/common.js"></script>
+	<script type="text/html" class='template' id='newlyTemp'>
+		<li><a href='/Home/Index/post/id/<%=id%>'><%=post_title%> </a></li>
+	</script>
+	<script type="text/html" class='template' id='pigeonholeTemp'>
+		<li><a href='/Home/Index/index/pig/<%=ymd%>'><%=ymd%> (<%=cnt%>) </a></li>
+	</script>
 	
-	<script type="text/javascript" src="http://cdn.bootcss.com/underscore.js/1.7.0/underscore-min.js"></script>
+	<script type="text/javascript" src="http://cdn.bootcss.com/underscore.js/1.7.0/underscore.js"></script>
 	<script type="text/javascript" src="http://cdn.bootcss.com/backbone.js/1.1.2/backbone-min.js"></script>
 	<script type="text/javascript">
-		var posts = <?php echo ($posts); ?>;
+		var posts = <?php echo ($posts); ?>,
+            lastPosts = <?php echo ($lastPosts); ?>,
+            pigeonhole = <?php echo ($pigeonhole); ?>;
 	</script>
     <script type="text/javascript" src="<?php echo defaultJs();?>"></script>
     <script type="text/html" class='template' id='postsTemp'>

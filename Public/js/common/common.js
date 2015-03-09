@@ -31,5 +31,24 @@ $(function(){
 		
 		$(this).css({backgroundColor:colorSet[ranNum]});
 	});
+
+
+	if(typeof lastPosts !== 'undefined'){
+		var template = _.template($('#newlyTemp').html());
+		var html = '';
+		_.each(lastPosts,function(d){
+			html += template(d); 
+		})
+		$('.newly ul').html(html);
+	}
+
+	if(typeof pigeonhole !== 'undefined'){
+		var template = _.template($('#pigeonholeTemp').html());
+		var html = '';
+		_.each(pigeonhole,function(d){
+			html += template(d); 
+		})
+		$('.pigeonhole ul').html(html);
+	}
 	
 });

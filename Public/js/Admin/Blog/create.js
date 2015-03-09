@@ -54,6 +54,12 @@
 })(window, document);
 
 $(function(){
+	$('#datetimepicker').datetimepicker({
+		'startView':3,
+		'minView':2,
+		'autoclose':true,
+	});	
+
 	var ue = UE.getEditor('ue_content');
 
 
@@ -64,14 +70,16 @@ $(function(){
 		url:"/Admin/Blog/postHandle",
 		initialize:function(){
 			$('#submit_post').click(function(){
+				var timeSta = postModel.get('timeSta');
+				post_date = timeSta ? $('input[name=time]').val() : null;
 
 				var data = {
 					post_title:$('#ue_title>input').val(),
 					post_content:ue.getContent(),
 					post_excerpt:ue.getPlainTxt().substring(0,255)+'...',
-					post_preimg:$('.pre_img>img').attr('src')
+					post_preimg:$('.pre_img>img').attr('src'),
+					post_date:post_date
 				};
-
 				postModel.set(data);
 				
 				if(postModel.isValid()){
@@ -81,7 +89,7 @@ $(function(){
 						},
 						success:function(model,response,options){
 							if(response.status ==1 ){
-								location.href ='/Home/Index';
+								location.href = location.href;
 							}
 						}
 					});	
@@ -103,6 +111,7 @@ $(function(){
 		el:'.main',
 		events:{
 			'click .pre_img>img':'preImgLoader',
+			'click input[name=timeset]':'timeSet',
 		},
 		preImgLoader:function(){
 		// if (upload_flag == 1) {
@@ -148,6 +157,15 @@ $(function(){
 
 			}
 		});
+		},
+		timeSet:function(){
+			var timeSta = $('input[name=timeset]').get(0).checked;
+			if(timeSta === true){
+				$('input[name=time]').removeAttr('disabled');
+			}else{
+				$('input[name=time]').attr({disabled:'disabled'});
+			}
+			postModel.set({timeSta:timeSta});
 		}
 	});
 	var postView = new PostView;

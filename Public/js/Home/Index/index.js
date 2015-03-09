@@ -44,6 +44,9 @@ $(function(){
 
 	var AppView = Backbone.View.extend({
 		el:'.leftPan',
+		events:{
+			
+		},
 		initialize:function(){
 			this.addAll();
 		},
