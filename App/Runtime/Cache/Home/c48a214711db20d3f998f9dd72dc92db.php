@@ -16,7 +16,6 @@
 			<div class="navigator">
 				<ul>
 					<li><a href="/">首页</a></li>
-					<li><a href="/Admin/Index/index">后台</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -130,7 +129,6 @@
 						<span>
 							<ul>
 								<li>
-									<a href="/Admin/Index/index">登陆</a>
 									<a href="">关于Bean</a>
 								</li>
 							</ul>					
