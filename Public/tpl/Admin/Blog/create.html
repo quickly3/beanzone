@@ -14,10 +14,13 @@
 	<script type="text/javascript" src="__VENDOR__/backbone.js"></script>
 	<script type="text/javascript" src="__VENDOR__/backbone-validation.js"></script>
 	<script type="text/javascript" src="__VENDOR__/bootstrap/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+	<script type="text/javascript">
+	var phpRet = {$phpRet};
+	</script>
 	<script type="text/javascript" src="{:defaultJs()}"></script>
 </block>
 <block name='main'>
-	<div class="main row">
+	<div class="main row" id='myModal'>
 		<div class="editor col-lg-9">
 			<div id="ue_title">
 				<input class="form-control"></input>
@@ -66,13 +69,76 @@
 						</li>
 					</ul>
 				</div>
+
 				<div class="submit">
 					
 				</div>
 			</div>
 
+			<div class="control category">
+				<div class="ct_title">
+					<b>分类目录</b>
+				</div>
+				
+				<div class="cate_input">
+					<ul>
+						<li class='cate_active'><a href="#cate_all">全部标签</a></li>
+						<li><a href="#cate_usual">常用标签</a></li>
+					</ul>
+				</div>
+				<div class="cate_all" id="cate_all">
+					<p><input type="checkbox">test</p>
+				</div>
+				<div class="cate_usual" id="cate_usual">
+					<p><input type="checkbox">test2</p>
+				</div>				
+				<div class='metaAdd'>
+					<a href="#metaAddZone">添加分类目录</a>
+				</div>
+				<div id='metaAddZone'>
+					<input type='text' id="cate_name" class='form-control'></input>
+					<select id='cate_paret' class='form-control'>
+						<option value="0">--父级分类标签--</option>
+					</select>
+					<input type="button" id='addCate' class='btn btn-info' value="添加分类目录">
+				</div>
+			</div>
+
+			<div class="control meta">
+				<div class="ct_title">
+					<b>标签</b>
+				</div>
+				<div class="meta_input">
+					<input type="text"><span class='btn btn-info'>添加</span>	
+				</div>
+				<div class="meta_zone">
+					<span><i class='fa fa-times-circle'></i>asdas</span>
+					<span><i class='fa fa-times-circle'></i>asdas</span>
+					<span><i class='fa fa-times-circle'></i>asdas</span>
+					<span><i class='fa fa-times-circle'></i>asdas</span>
+					<span><i class='fa fa-times-circle'></i>asdas</span>
+					<span><i class='fa fa-times-circle'></i>asdas</span>
+					<span><i class='fa fa-times-circle'></i>asdas</span>
+					<span><i class='fa fa-times-circle'></i>asdas</span>
+					<span><i class='fa fa-times-circle'></i>asdas</span>
+					<span><i class='fa fa-times-circle'></i>asdas</span>
+				</div>
+				<div class='metaGet'>
+					<a href="">从已有标签中添加</a>
+				</div>
+			</div>
 
 
+		</div>
+	</div>
+	<div class="shadow"></div>
+	<div class="imgModal">
+		<div class="imgZone">
+
+		</div>
+		<div class="imgHandle">
+			<span id='chioceImg' class="btn btn-xs btn-primary">确定</span>
+			<span id='uploadImg' class="btn btn-xs btn-primary">上传图片</span>
 		</div>
 	</div>
 </block>

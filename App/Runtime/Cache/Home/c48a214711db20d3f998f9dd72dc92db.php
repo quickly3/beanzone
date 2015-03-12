@@ -15,11 +15,6 @@
 			<div class="navigator">
 				<ul>
 					<li><a href="/">首页</a></li>
-					<li><a href="">首页</a></li>
-					<li><a href="">首页</a></li>
-					<li><a href="">首页</a></li>
-					<li><a href="">首页</a></li>
-					<li><a href="">首页</a></li>
 					<li><a href="/Admin/Index/index">后台</a></li>
 				</ul>
 			</div>
@@ -134,7 +129,7 @@
 						<span>
 							<ul>
 								<li>
-									<a href="">登陆</a>
+									<a href="/Admin/Index/index">登陆</a>
 									<a href="">关于Bean</a>
 								</li>
 							</ul>					
@@ -162,9 +157,7 @@
 	<script type="text/javascript" src="http://cdn.bootcss.com/underscore.js/1.7.0/underscore.js"></script>
 	<script type="text/javascript" src="http://cdn.bootcss.com/backbone.js/1.1.2/backbone-min.js"></script>
 	<script type="text/javascript">
-		var posts = <?php echo ($posts); ?>,
-            lastPosts = <?php echo ($lastPosts); ?>,
-            pigeonhole = <?php echo ($pigeonhole); ?>;
+		var phpRet = <?php echo ($phpRet); ?>;
 	</script>
     <script type="text/javascript" src="<?php echo defaultJs();?>"></script>
     <script type="text/html" class='template' id='postsTemp'>

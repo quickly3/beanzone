@@ -6,6 +6,7 @@ use Think\Controller;
 class IndexController extends Controller {
     public function index(){
         $pig = I('pig');
+        $cate = I('cate');
         $M = M();
         $sql ='SELECT  a.*,b.user_login AS user_name 
                  FROM b_posts AS a 
@@ -14,21 +15,20 @@ class IndexController extends Controller {
         if(trim($pig) !== ''){
             $sql.=" WHERE DATE_FORMAT(post_date,'%Y-%m') = '$pig'";
         }
+        if(trim($cate) !== ''){
+            $sql.=" WHERE a.id IN(SELECT post_id FROM b_postmeta WHERE meta_id = '$cate')";
+        }
 
         $sql.=" ORDER BY post_date DESC ";
 
         $data = $M->query($sql);
 
-    	$posts = json_encode($data);
+        $phpRet['posts'] = $data;
+        $phpRet['lastPosts'] = getLastPosts();
+        $phpRet['pigeonhole'] = getPigeonhole();
+        $phpRet['category'] = getCategory();
 
-        $lastPosts = json_encode(getLastPosts());
-        $this->assign("lastPosts",$lastPosts);
-        $pigeonhole = json_encode(getPigeonhole());
-        $this->assign("pigeonhole",$pigeonhole);
-
-
-
-    	$this->assign("posts",$posts);
+    	$this->assign("phpRet",json_encode($phpRet));
     	$this->display(defaultTpl());
     }
 
@@ -40,15 +40,13 @@ class IndexController extends Controller {
             LEFT JOIN b_users b ON a.`post_author` = b.`id`
                 WHERE a.id=$post_id ";
 
-     	if($posts = M()->query($sql)){
-            $posts = json_encode($posts);
-        }
-        $lastPosts = json_encode(getLastPosts());
-        $this->assign("lastPosts",$lastPosts);
-        $pigeonhole = json_encode(getPigeonhole());
-        $this->assign("pigeonhole",$pigeonhole);
+     	$data = M()->query($sql);
+        $phpRet['posts'] = $data;
+        $phpRet['lastPosts'] = getLastPosts();
+        $phpRet['pigeonhole'] = getPigeonhole();
+        $phpRet['category'] = getCategory();
 
-    	$this->assign("posts",$posts);
+    	$this->assign("phpRet",json_encode($phpRet));
     	$this->display(defaultTpl());   	
     }
 }

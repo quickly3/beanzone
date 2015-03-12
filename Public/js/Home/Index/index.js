@@ -40,7 +40,7 @@ $(function(){
 		model:PostsModel
 	});
 
-	var postCollection = new PostsCollections(posts);
+	var postCollection = new PostsCollections(phpRet.posts);
 
 	var AppView = Backbone.View.extend({
 		el:'.leftPan',

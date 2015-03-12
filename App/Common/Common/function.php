@@ -66,4 +66,13 @@
 		$pigeonhole = $M->query($sql);
 		return $pigeonhole;		
 	}
+
+	function getCategory(){
+		$M = M();
+		$sql = "SELECT id AS meta_id,`meta_name`
+				FROM b_meta 
+				WHERE  id IN (SELECT DISTINCT meta_id FROM b_postmeta)";
+		$category = $M->query($sql);
+		return $category;			
+	}
 ?>

@@ -2,8 +2,7 @@
 $(function(){
 
 	var PostsModel = Backbone.Model.extend({});
-
-	var postsModel = new PostsModel(posts);
+	var postsModel = new PostsModel(phpRet.posts);
 
 	var PostsView = Backbone.View.extend({
 		el:'.leftPan',

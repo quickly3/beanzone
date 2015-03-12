@@ -5,7 +5,7 @@ use Think\Controller\RestController;
 class IndexController extends RestController{
 	public function __construct(){
 		parent::__construct();
-		if(ACTION_NAME !== 'login'&&ACTION_NAME !== 'loginHandle'){
+		if((ACTION_NAME !== 'login')&&(ACTION_NAME !== 'loginHandle')){
 			is_login();
 		}
 	}
@@ -21,6 +21,7 @@ class IndexController extends RestController{
 	public function logout(){
 		unset($_SESSION['user_name']);
 		unset($_SESSION['user_id']);
+		header("Location:".U("Home/Index/index")); 
 	}
 
 	public function loginHandle(){
