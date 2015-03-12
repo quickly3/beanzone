@@ -54,11 +54,18 @@
 })(window, document);
 
 $(function(){
+	var imgTpl;
+
+	imgTpl = _.template('<div class="postImg">\
+						<img src="<%=src%>" alt="">\
+						</div>');
+	
 	$('#datetimepicker').datetimepicker({
 		'startView':3,
 		'minView':2,
 		'autoclose':true,
 	});	
+
 
 			$('.shadow').click(function(){
 				$(this).hide();
@@ -195,12 +202,10 @@ $(function(){
 		},
 		preImgLoader:function(){
 			var shadowH = document.height,
-				postImgs,imgTpl,
+				postImgs,
 				attachHtml = ''
 
-			imgTpl = _.template('<div class="postImg">\
-						<img src="<%=src%>" alt="">\
-						</div>');
+			
 
 			$('.shadow').css({'height':shadowH}).fadeIn();
 			$.post('/Admin/Blog/getImgs',null,function(res){
