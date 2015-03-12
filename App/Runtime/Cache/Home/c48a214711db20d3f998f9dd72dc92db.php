@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>D_bean Factory - My TED for you</title>
 <!-- 	<link type="text/css" rel="stylesheet" href="/Public/vendor/bootstrap/css/bootstrap.min.css"> -->
+	<link rel="shortcut icon" href="/favicon.ico">
 	<link type="text/css" rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/4.2.0/css/font-awesome.min.css">
 	<link type="text/css" rel="stylesheet" href="/Public/css/common/all.css">
 	
