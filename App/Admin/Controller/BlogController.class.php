@@ -48,9 +48,9 @@ class BlogController extends RestController{
 				date_default_timezone_set('PRC');
 				if($data['post_date'] === null){
 					$data['post_date'] = $date = date("Y-m-d H:i:s");
-					unset($data['timeSta']);
+					
 				}
-				
+				unset($data['timeSta']);
 				if(isset($data['post_cate'])){
 					$cateArr = split(':',$data['post_cate']);
 					unset($data['post_cate']);

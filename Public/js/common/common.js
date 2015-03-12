@@ -36,7 +36,7 @@ $(function(){
 	$(".category ul>li").html(cateHtml);
 
 
-	if(typeof lastPosts !== 'undefined'){
+	if(typeof phpRet.lastPosts !== 'undefined'){
 		var template = _.template($('#newlyTemp').html());
 		var html = '';
 		_.each(phpRet.lastPosts,function(d){
@@ -45,7 +45,7 @@ $(function(){
 		$('.newly ul').html(html);
 	}
 
-	if(typeof pigeonhole !== 'undefined'){
+	if(typeof phpRet.pigeonhole !== 'undefined'){
 		var template = _.template($('#pigeonholeTemp').html());
 		var html = '';
 		_.each(phpRet.pigeonhole,function(d){
