@@ -62,7 +62,7 @@
 
 	function getPigeonhole(){
 		$M = M();
-		$sql = "SELECT DATE_FORMAT(post_date,'%Y-%m') AS ymd ,COUNT(*) as cnt  FROM b_posts  GROUP BY  ymd ORDER BY post_date";
+		$sql = "SELECT DATE_FORMAT(post_date,'%Y-%m') AS ymd ,COUNT(*) as cnt  FROM b_posts  GROUP BY  ymd ORDER BY post_date DESC";
 		$pigeonhole = $M->query($sql);
 		return $pigeonhole;		
 	}
