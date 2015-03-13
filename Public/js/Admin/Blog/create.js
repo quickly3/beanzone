@@ -256,7 +256,7 @@ $(function(){
 			var metaHtml;
 			$.post(url,data,function(res){
 				if(res&&res.sta == 1){
-					metaHtml = '<p><input type="checkbox" class="choicedCate" data-cateId="'+pid+'" />'+meta_name+'</p>';
+					metaHtml = '<p><input type="checkbox" class="choicedCate" value="'+res.cateId+'" />'+meta_name+'</p>';
 					$('#cate_all').append(metaHtml);
 				}
 			},'json');
