@@ -1,14 +1,19 @@
 <extend name='Public/tpl/base/base.html' />
 
 <block name="csszone">
+	<link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/SyntaxHighlighter/3.0.83/styles/shCoreMidnight.min.css">
     <link rel="stylesheet" href="{:defaultCss()}">
 </block>
 
 <block name="jszone">
 	<script type="text/javascript" src="http://cdn.bootcss.com/underscore.js/1.7.0/underscore.js"></script>
 	<script type="text/javascript" src="http://cdn.bootcss.com/backbone.js/1.1.2/backbone-min.js"></script>
+	<script type="text/javascript" src="http://cdn.bootcss.com/SyntaxHighlighter/3.0.83/scripts/shCore.min.js"></script>
+	<script type="text/javascript" src="http://cdn.bootcss.com/SyntaxHighlighter/3.0.83/scripts/shBrushJScript.min.js"></script>
+	<script type="text/javascript" src="http://cdn.bootcss.com/SyntaxHighlighter/3.0.83/scripts/shBrushPhp.min.js"></script>
 	<script type="text/javascript">
 		var phpRet = {$phpRet};
+		SyntaxHighlighter.all();
 	</script>
     <script type="text/javascript" src="{:defaultJs()}"></script>
     <script type="text/html" class='template' id='postsTemp'>
