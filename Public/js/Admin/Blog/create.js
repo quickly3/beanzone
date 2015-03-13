@@ -176,7 +176,7 @@ $(function(){
 						},
 						success:function(model,response,options){
 							if(response.status ==1 ){
-								location.href = location.href;
+								location.href = "/Admin/Blog/create";
 							}
 						}
 					});	
