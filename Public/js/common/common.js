@@ -26,8 +26,9 @@ $(function(){
 	var colorSet = ['#e8443a','#aa5096','#1CA1E2','#FFD302','#FFD302','#9B4C13','#8DC027','#FF0198','#4837cd','#33ac5b','#20c8a6'];
 	var cateTpl = _.template('<a href="/Home/Index/index/cate/<%=meta_id%>" style="background-color:<%=bg_color%>;"><%=meta_name%></a>');
 	var cLen,ranNum,cateHtml = '';
-
+	
 	_.map(phpRet.category,function(d){
+		
 		cLen = colorSet.length;
 		ranNum = Math.ceil(Math.random()*cLen) - 1;
 		d.bg_color = colorSet[ranNum];

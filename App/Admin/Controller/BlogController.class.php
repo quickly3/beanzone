@@ -51,16 +51,18 @@ class BlogController extends RestController{
 					
 				}
 				unset($data['timeSta']);
+
+
 				if(isset($data['post_cate'])){
 					$cateArr = split(':',$data['post_cate']);
 					unset($data['post_cate']);
 				}
 
-
 				$resId = $post->add($data);
 				if(!$resId){
 					$res['status'] = 0;
 				};
+
 				if(count($cateArr) != 0){
 					foreach ($cateArr as $k => $v) {
 						if(trim($v) !== ''){

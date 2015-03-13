@@ -146,16 +146,18 @@ $(function(){
 			$('#submit_post').click(function(){
 				var timeSta = postModel.get('timeSta');
 				post_date = timeSta ? $('input[name=time]').val() : null;
-				var post_cate ;
-				if($('#cate_all input[type=checkbox][checked]').length !== 0){
-					$('#cate_all input[type=checkbox]').each(function(){
-						if(this.checked){
-							post_cate += this.value + ':'
-						}
-					}); 					
-				}
+				var post_cate;
 
-				
+
+				$('#cate_all input[type=checkbox]').each(function(){
+					if(this.checked){
+						if(typeof post_cate === 'undefined'){
+							post_cate=''	
+						}
+						post_cate += this.value+':'; 
+					}
+				}); 				
+
 				var data = {
 					post_title:$('#ue_title>input').val(),
 					post_content:ue.getContent(),
